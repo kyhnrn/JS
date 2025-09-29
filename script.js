@@ -27,14 +27,18 @@ window.addEventListener('load',function(){
 })
 
 
-document.getElementById("lists").addEventListener("mouseover", function() {
+pullDownButton.addEventListener("mouseover", function() {
   console.log("乗る");
-});
+  pullDownButton.setAttribute("style","background-color:blue;")
+ })
 
-document.getElementById("lists").addEventListener("mouseout", function() {
+
+pullDownButton.addEventListener("mouseout", function() {
   console.log("外れる");
+  pullDownButton.removeAttribute("style","background-color:red;")
 });
 
-document.getElementById("lists").addEventListener("click", function() {
+pullDownButton.addEventListener("click", function() {
   console.log("クリック");
+  pullDownButton.setAttribute("style","background-color:green;")
 });
