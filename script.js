@@ -18,3 +18,23 @@ function getElement(){
 
 let lists = document.getElementsByClassName("pull-down-list")
 console.log(lists);
+
+const pullDownButton = document.getElementById("lists")
+console.log(pullDownButton)
+
+window.addEventListener('load',function(){
+    const pullDownButton = this.document.getElementById("lists")
+})
+
+
+document.getElementById("lists").addEventListener("mouseover", function() {
+  console.log("乗る");
+});
+
+document.getElementById("lists").addEventListener("mouseout", function() {
+  console.log("外れる");
+});
+
+document.getElementById("lists").addEventListener("click", function() {
+  console.log("クリック");
+});
