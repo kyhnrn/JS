@@ -1,3 +1,7 @@
+function pullDown() {
+ 
+}
+
 window.alert("ブラウザオブジェクトの取得に成功！")
 document.getElementById("hoge")
 let item = document.getElementById("lists");
@@ -22,6 +26,16 @@ console.log(lists);
 const pullDownButton = document.getElementById("lists")
 console.log(pullDownButton)
 const pullDownParents = document.getElementById("pull-down")
+const pullDownChild = document.querySelectorAll(".pull-down-list")
+const currentlist = document.getElementById("current-list")
+
+pullDownChild.forEach(function(list){
+  list.addEventListener('click', function(){
+    const value = list.innerHTML
+    console.log(value)
+    currentlist.innerHTML=value
+  })
+})
 
 window.addEventListener('load',function(){
     const pullDownButton = this.document.getElementById("lists")
@@ -49,4 +63,5 @@ pullDownButton.addEventListener("click", function() {
   }
 });
 
+window.addEventListener('load', pullDown);
 
